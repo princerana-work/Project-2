@@ -19,7 +19,7 @@ source.include_exts = py,png,jpg,kv,atlas
 
 # (list) Application requirements
 # openssl and urllib3 are required for HTTPS API requests and audio stream buffering
-requirements = python3,kivy,openssl,urllib3,requests
+requirements = python3,kivy,openssl,requests
 
 # (list) Supported orientations
 orientation = portrait
