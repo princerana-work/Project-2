@@ -5,69 +5,59 @@ title = Music Streamer
 
 # (str) Package name
 package.name = musicstreamer
-# (str) Application versioning
 
-version = 0.1
-
-# (str) Package domain (needed for android/ios packaging)
+# (str) Package domain
 package.domain = org.test
 
-# (str) Source code where the main.py live
+# (str) Source code directory
 source.dir = .
 
-# (list) Source files to include (let empty to include all the files)
+# (str) Application version
+version = 0.1
+
+# (list) Source files
 source.include_exts = py,png,jpg,kv,atlas
 
 # (list) Application requirements
-# openssl and urllib3 are required for HTTPS API requests and audio stream buffering
 requirements = python3,kivy,openssl,requests
 
 # (list) Supported orientations
 orientation = portrait
 
-# (bool) Indicate if the application should be fullscreen or not
+# (bool) Fullscreen mode
 fullscreen = 0
 
 # (list) Permissions
-# Internet permissions are strictly mandatory for music streaming
 android.permissions = INTERNET, ACCESS_NETWORK_STATE
 
-# (int) Target Android API
+# (int) Target Android API (Recommended API 33)
 android.api = 33
 
-# (int) Minimum API your APK will support
+# (int) Minimum API supported
 android.minapi = 21
 
-# (int) Android SDK version to use
-android.sdk = 33
-
-# (str) Android NDK version to use
-android.ndk = 25b
+# (str) Android NDK version recommended by p4a
+android.ndk = 25c
 
 # (bool) Accept NDK license automatically
 android.accept_sdk_license = True
 
-# Allows HTTP cleartext traffic for media streaming
+# Allow HTTP cleartext traffic
 android.manifest.application_arguments = android:usesCleartextTraffic="true"
 
 # (bool) Enable AndroidX support
 android.enable_androidx = True
 
-# (list) Architectures to build for (64-bit and 32-bit ARM for modern devices)
+# (list) Architectures to build for
 android.archs = arm64-v8a, armeabi-v7a
 
-# (bool) Allow backup of application data
+# (bool) Allow backup
 android.allow_backup = True
 
 [buildozer]
 
-# (int) Log level (0 = error only, 1 = info, 2 = debug)
+# Log level
 log_level = 2
 
-# (int) Display warning if buildozer is run as root
+# Warn on root
 warn_on_root = 1
-
-# (str) python-for-android git clone directory / branch
-p4a.branch = master
-
-requirements = python3==3.10.12,kivy,openssl,requests
