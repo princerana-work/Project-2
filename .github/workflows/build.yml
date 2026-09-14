@@ -1,3 +1,4 @@
+
 name: Build Android APK
 
 on:
@@ -33,11 +34,10 @@ jobs:
             zlib1g-dev libncurses5-dev libncursesw5-dev libffi-dev libssl-dev \
             libltdl-dev
           pip install --upgrade pip
-          pip install --upgrade "buildozer" "cython==0.29.33"
+          pip install --upgrade "buildozer>=1.5.0" "cython==0.29.33"
 
       - name: Build APK with Buildozer
         run: |
-          export PATH=$PATH:~/.local/bin
           buildozer -v android debug
 
       - name: Upload APK Artifact
@@ -45,3 +45,4 @@ jobs:
         with:
           name: app-debug
           path: bin/*.apk
+          
