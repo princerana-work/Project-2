@@ -6,6 +6,7 @@ title = Music Streamer
 # (str) Package name
 package.name = musicstreamer
 # (str) Application versioning
+
 version = 0.1
 
 # (str) Package domain (needed for android/ios packaging)
