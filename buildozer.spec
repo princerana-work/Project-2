@@ -68,3 +68,5 @@ warn_on_root = 1
 
 # (str) python-for-android git clone directory / branch
 p4a.branch = master
+
+requirements = python3==3.10.12,kivy,openssl,requests
