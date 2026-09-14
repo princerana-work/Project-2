@@ -65,3 +65,6 @@ log_level = 2
 
 # (int) Display warning if buildozer is run as root
 warn_on_root = 1
+
+# (str) python-for-android git clone directory / branch
+p4a.branch = master
